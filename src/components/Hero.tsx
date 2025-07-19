@@ -1,5 +1,4 @@
-import React from 'react';
-import { ArrowRight, Download, Eye } from 'lucide-react';
+import { ArrowRight, Download, Eye, Code } from 'lucide-react';
 
 const Hero = () => {
   const scrollToSection = (sectionId: string) => {
@@ -29,7 +28,7 @@ const Hero = () => {
                 Full-Stack Developer & UI/UX Enthusiast
               </h2>
               <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl leading-relaxed">
-                Crafting clean code and beautiful experiences with design thinking and industrial precision. 
+                Crafting clean code and beautiful experiences with design thinking and industrial precision.
                 Transforming ideas into scalable digital solutions.
               </p>
             </div>
@@ -64,10 +63,15 @@ const Hero = () => {
                 <span>View My Work</span>
                 <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
               </button>
-              <button className="border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:border-blue-600 dark:hover:border-blue-400 hover:text-blue-600 dark:hover:text-blue-400 px-6 py-3 rounded-lg font-medium transition-all duration-300 flex items-center justify-center space-x-2">
+              <a
+                href="/Resume.pdf"
+                download
+                className="border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:border-blue-600 dark:hover:border-blue-400 hover:text-blue-600 dark:hover:text-blue-400 px-6 py-3 rounded-lg font-medium transition-all duration-300 flex items-center justify-center space-x-2"
+              >
                 <Download size={20} />
                 <span>Download CV</span>
-              </button>
+              </a>
+
             </div>
           </div>
 
@@ -77,7 +81,7 @@ const Hero = () => {
               <div className="w-80 h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden bg-gradient-to-br from-blue-400 to-purple-500 p-1">
                 <div className="w-full h-full rounded-full overflow-hidden bg-white dark:bg-gray-800">
                   <img
-                    src="https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=800"
+                    src="/Edited.png"
                     alt="Sandaruwan Wadiyage"
                     className="w-full h-full object-cover"
                   />
@@ -88,7 +92,10 @@ const Hero = () => {
                 <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
               </div>
               <div className="absolute -bottom-4 -left-4 bg-white dark:bg-gray-800 p-4 rounded-xl shadow-lg">
-                <div className="text-blue-600 dark:text-blue-400 font-bold">UI/UX</div>
+                <div className="text-blue-600 dark:text-blue-400 font-bold flex items-center space-x-1">
+                  <Code size={18} />
+                  <span>Developer</span>
+                </div>
               </div>
             </div>
           </div>
